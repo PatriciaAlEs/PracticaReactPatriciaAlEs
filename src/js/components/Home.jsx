@@ -30,6 +30,17 @@ const Home = () => {
 	}
 
 
+	const updateGoal = (id, newGoal) => {
+		setRegistroDeHabitos((prev) =>
+			prev.map((habito) =>
+				habito.id === id
+					? { ...habito, goal: newGoal } 
+					: habito
+			)
+		);
+	};
+
+
 	return (
 		<div className="text-center">
 			<h1 className="text-center mt-5">Counter Dashboard!</h1>
@@ -38,6 +49,7 @@ const Home = () => {
 					<CounterCard
 						key={habito.id}
 						habito={habito}
+						updateGoal={updateGoal}
 						sumStep={sumStep}
 					/>
 				))}

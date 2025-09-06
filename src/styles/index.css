@@ -42,6 +42,9 @@ body {
     margin: 0 auto;
     padding: 32px 16px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
@@ -59,11 +62,12 @@ h1 {
 }
 
 .cards-grid {
-  display: grid;
-  gap: 2rem;
-  margin-top: 18px;
-  justify-content: center; /* centra cuando hay pocas columnas */
-  grid-template-columns: repeat(4, 1fr); /* 4 columnas en escritorio */
+    display: grid;
+    gap: 2rem;
+    margin-top: 18px;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 900px;
 }
 
 
@@ -179,15 +183,17 @@ h1 {
 }
 
 @media (max-width: 992px) {
-  .cards-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
-  }
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columnas en tablets */
+    }
 }
 
 @media (max-width: 576px) {
-  .cards-grid {
-    grid-template-columns: 1fr; /* 1 columna en móviles */
-  }
+    .cards-grid {
+        grid-template-columns: 1fr;
+        /* 1 columna en móviles */
+    }
 }
 
 
@@ -245,4 +251,34 @@ h1 {
     .btn-danger {
         color: #0b1220 !important;
     }
+}
+
+
+.goal-container {
+    margin-top: 12px;
+    text-align: left;
+}
+
+.goal-label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 4px;
+    color: #333;
+    font-weight: 600;
+}
+
+.goal-input {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: #fff;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+.goal-input:focus {
+    border-color: var(--info);
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.3);
+    outline: none;
 }
