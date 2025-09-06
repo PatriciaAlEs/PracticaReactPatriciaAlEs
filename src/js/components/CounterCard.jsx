@@ -2,10 +2,6 @@ import React from "react";
 import Home from "./Home";
 import Confetti from "react-confetti";
 
-// Solo se encarga de mostrar la UI de ese contador (label, icono, valor, botones, input de step).
-// No tiene su propio estado para value, porque ese ya está en Home.
-// Usa las funciones que le pasas como props (onInc, onDec, onReset, onChangeStep) y las ejecuta en los botones.
-
 
 export const CounterCard = ({ habito, sumStep, updateGoal }) => {
     const { id, label, icon, value, step, quecosa, goal } = habito;
