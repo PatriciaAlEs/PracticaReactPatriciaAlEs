@@ -7,14 +7,13 @@ import { CounterCard } from "./CounterCard";
 const Home = () => {
 
 	const [registroDeHabitos, setRegistroDeHabitos] = useState([
-		{ id: 1, label: "Ejercicio", icon: "🏋️‍♀️", value: 0, step: 5 }, // 5 min por clic
-		{ id: 2, label: "Agua", icon: "💧", value: 0, step: 1 }, // 1 vaso por clic
-		{ id: 3, label: "Fruta", icon: "🍎", value: 0, step: 1 }, // 1 pieza por clic
-		{ id: 4, label: "Lectura", icon: "📖", value: 0, step: 10 }, // 10 páginas por clic
+		{ id: 1, label: "Ejercicio", icon: "🏋️‍♀️", value: 0, step: 5, quecosa: "minutos de ejercicio" }, // 5 min por clic
+		{ id: 2, label: "Agua", icon: "💧", value: 0, step: 1, quecosa: "vaso de agua" }, // 1 vaso por clic
+		{ id: 3, label: "Fruta", icon: "🍎", value: 0, step: 1, quecosa: "pieza de fruta" }, // 1 pieza por clic
+		{ id: 4, label: "Lectura", icon: "📖", value: 0, step: 10, quecosa: "paginas leídas" }, // 10 páginas por clic
 	]);
 
 	// necesito pasar la id, para que si la id coincide si le sume uno a ese step, porque hay varios contadores asociados a un id.
-
 	// le paso id como parametro para tener un dato para la coincidencia
 	// accedo al estado desde el set setRegistroDeHabitos para poder modificarlo (modificaré step y value)
 	// mapeo mi array de objetos con un map

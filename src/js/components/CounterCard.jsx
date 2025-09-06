@@ -8,15 +8,16 @@ import Home from "./Home";
 
 export const CounterCard = ({ habito, sumStep }) => {
 
-    const { id, label, icon, value, step } = habito
+    const { id, label, icon, value, step, quecosa } = habito
     console.log(habito);
 
     return (
         <div className="card">
-            <h2>{icon} {label} <span className="step-badge">+{step}</span></h2>
+            <h2>{icon} {label}</h2>
+            <span className="step-badge">+{step} {quecosa}</span>
             <div className="value-display">{value}</div>
             <div className="btn-row">
-                <button className="btn btn-info" onClick={() => sumStep(id)}>+{step}</button>
+                <button className="btn btn-info" onClick={() => sumStep(id)}>Suma</button>
             </div>
         </div>
 
