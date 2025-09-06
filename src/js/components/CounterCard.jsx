@@ -6,20 +6,20 @@ import Home from "./Home";
 // Usa las funciones que le pasas como props (onInc, onDec, onReset, onChangeStep) y las ejecuta en los botones.
 
 
-export const CounterCard = ({ habito }) => {
+export const CounterCard = ({ habito, sumStep }) => {
 
     const { id, label, icon, value, step } = habito
     console.log(habito);
 
     return (
-        <div>
-            <h2>{icon} {label}</h2>
-            <p>Value: {value}</p>
-            <p>Step: {step}</p>
+        <div className="card">
+            <h2>{icon} {label} <span className="step-badge">+{step}</span></h2>
+            <div className="value-display">{value}</div>
+            <div className="btn-row">
+                <button className="btn btn-info" onClick={() => sumStep(id)}>+{step}</button>
+            </div>
         </div>
+
     )
-
-
-
-
 }
+

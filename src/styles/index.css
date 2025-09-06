@@ -1,11 +1,239 @@
-/* 
+:root {
+    --bg: #0f1221;
+    --gradient-1: 255, 87, 159;
+    --gradient-2: 186, 183, 0;
+    --card-bg: rgba(255, 255, 255, 0.06);
+    --card-stroke: rgba(255, 255, 255, 0.12);
+    --text: #e9ecf1;
+    --muted: #aab3c2;
+    --accent: #65f0d5;
+    --info: #60a5fa;
+    --ok: #34d399;
+    --bad: #f43f5e;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    --radius: 16px;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+* {
+    box-sizing: border-box;
+}
 
-*/
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+    background:
+        radial-gradient(1200px 800px at 20% 10%, rgba(var(--gradient-1), 0.15), transparent 60%),
+        radial-gradient(1000px 700px at 80% 80%, rgba(var(--gradient-2), 0.18), transparent 60%),
+        linear-gradient(180deg, #0a0c18, var(--bg));
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    line-height: 1.5;
+}
+
+
+.text-center {
+    margin: 0 auto;
+    padding: 32px 16px;
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(28px, 3vw, 40px);
+    margin: 0 0 24px;
+    letter-spacing: 0.4px;
+    background: linear-gradient(90deg, #fff, rgba(var(--gradient-1), 0.9), rgba(var(--gradient-2), 0.9));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 18px rgba(255, 255, 255, 0.08);
+}
+
+
+.cards-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    align-items: stretch;
+    margin-top: 18px;
+}
+
+
+.card {
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 18px 18px 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform .2s ease, box-shadow .2s ease;
+    color: #1a1a1a;
+    width: 300px;
+    height: 250px;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+.card h2 {
+    font-size: 22px;
+    margin: 0 0 10px;
+    color: #111;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card h2::after {
+    content: "";
+    flex: 1 1 auto;
+    height: 1px;
+    margin-left: 10px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.16));
+}
+
+.card p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+
+.value-display {
+    font-size: 36px;
+    font-weight: bold;
+    color: #0f1221;
+    margin: 12px 0;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+
+.step-badge {
+    background: #ff579f;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+
+.btn {
+    border-radius: 12px !important;
+    border-width: 0 !important;
+    padding: 10px 14px !important;
+    font-weight: 600 !important;
+    letter-spacing: .2px;
+    box-shadow: var(--shadow);
+    transition: transform .12s ease, opacity .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+.btn:active {
+    transform: translateY(1px) scale(.99);
+}
+
+.btn-info {
+    background: linear-gradient(180deg, var(--info), #4389f7) !important;
+    color: #041326 !important;
+}
+
+.btn-success {
+    background: linear-gradient(180deg, var(--ok), #22c07d) !important;
+    color: #062016 !important;
+}
+
+.btn-danger {
+    background: linear-gradient(180deg, var(--bad), #e11d48) !important;
+    color: #2c020e !important;
+}
+
+.btn-outline {
+    background: transparent !important;
+    color: var(--text) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+.btn:hover {
+    filter: brightness(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+
+.card .btn-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+}
+
+@media (max-width: 420px) {
+    .card .btn-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text);
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.input:focus {
+    border-color: rgba(255, 255, 255, 0.32);
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.18);
+}
+
+
+:focus-visible {
+    outline: 3px solid rgba(96, 165, 250, 0.85);
+    outline-offset: 2px;
+    border-radius: 10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg: #f6f7fb;
+        --text: #0f1221;
+        --muted: #526071;
+        --card-bg: rgba(12, 17, 42, 0.04);
+        --card-stroke: rgba(12, 17, 42, 0.1);
+        --shadow: 0 10px 24px rgba(12, 17, 42, 0.08);
+    }
+
+    body {
+        background:
+            radial-gradient(1000px 700px at 10% 20%, rgba(var(--gradient-1), 0.15), transparent 60%),
+            radial-gradient(1000px 700px at 90% 90%, rgba(var(--gradient-2), 0.18), transparent 60%),
+            linear-gradient(180deg, #fdfefe, var(--bg));
+    }
+
+    .btn-info,
+    .btn-success,
+    .btn-danger {
+        color: #0b1220 !important;
+    }
+}
