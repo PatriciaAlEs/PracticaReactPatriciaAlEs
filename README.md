@@ -43,3 +43,8 @@ npm install
 
 Run the development server
 npm run dev
+
+## 👩‍💻 Author
+Personal project developed by **Patricia Álvarez**
+- [GitHub](https://github.com/PatriciaAlEs)  
+- [LinkedIn](https://www.linkedin.com/in/patricia-alvarez-estevez/)  
