@@ -28,9 +28,6 @@ src/
 ├── main.jsx # Entry point
 └── styles/ # CSS styles
 
-nginx
-Copiar código
-
 ## 🏗️ How to run locally
 
 If you want to run the project on your computer:
@@ -38,15 +35,11 @@ If you want to run the project on your computer:
 1. **Clone the repository**
    ```bash
    git clone https://github.com/PatriciaAlEs/PracticaReactPatriciaAlEs.git
-Navigate into the project folder
-
-bash
+   
+2. **Navigate into the project folder**
+  ```bash
 cd PracticaReactPatriciaAlEs
-Install dependencies
-
-bash
 npm install
-Run the development server
 
-bash
+Run the development server
 npm run dev
