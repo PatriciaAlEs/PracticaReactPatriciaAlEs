@@ -42,8 +42,10 @@ Si quieres ejecutar el proyecto en tu ordenador:
    npm run dev
 
 
-👩‍💻 Autor
-Proyecto personal desarrollado por Patricia Álvarez
+## 👩‍💻 Autora
+Proyecto personal desarrollado por **Patricia Álvarez**
 
+- [GitHub](https://github.com/PatriciaAlEs)  
+- [LinkedIn](https://www.linkedin.com/in/patricia-alvarez-estevez/)
 
  
