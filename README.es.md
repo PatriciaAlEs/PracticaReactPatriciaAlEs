@@ -45,6 +45,5 @@ Si quieres ejecutar el proyecto en tu ordenador:
 👩‍💻 Autor
 Proyecto personal desarrollado por Patricia Álvarez
 
-💻 Repo: https://lnkd.in/eEcwz5gy
 
  
