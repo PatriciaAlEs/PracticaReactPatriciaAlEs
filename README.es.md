@@ -15,7 +15,7 @@ React (Vite) · JavaScript (ES6+) · CSS · LocalStorage · Vercel
 - UI sencilla y responsive
 
 ## 📸 Capturas
-*(Añade aquí una imagen o GIF)*
+![Habit Tracker Screenshot](./src/img/habit-tracker.png)
 
 ## 📂 Estructura
 
