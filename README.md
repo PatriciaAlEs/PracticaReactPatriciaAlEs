@@ -1,39 +1,52 @@
-# Hello World with React boilerplate
+# Habit Tracker 📝
 
-Start coding a react application
+Web application built with **React** to register and track daily habits.
 
-> If you are working locally instead of using codespaces or gitpod, please follow [local installation steps](#local-installation-skip-if-you-are-working-on-codespaces-or-gitpod) and come back to this part of the readme.
+## 🚀 Demo
+[View demo on Vercel](https://practica-react-patricia-al-es.vercel.app)
 
-## How to start coding?
+## 🛠 Technologies
+- React (Vite)  
+- JavaScript (ES6+)  
+- CSS  
+- LocalStorage  
+- Vercel (deployment)  
 
-- Install the packages with `$ npm install`.
-- Run the webpack server with `$ npm run start`
+## ✨ Features
+- Add and delete habits  
+- Dynamic progress counter  
+- Data persistence between sessions (LocalStorage)  
+- Simple and responsive UI  
 
-You can update the `styles/index.css` or `js/index.js` depending on your needs.
-Add more files into your, `./src/js/components` or styles folder as you need them.
+## 📸 Screenshots
+![Habit Tracker Screenshot](./src/img/habit-tracker.png)
 
-## Local Installation (skip if you are working on codespaces or gitpod)
+## 📂 Project structure
+src/
+├── components/ # React components
+├── App.jsx # Main component
+├── main.jsx # Entry point
+└── styles/ # CSS styles
 
-Download the boilerplate using git
+nginx
+Copiar código
 
-```
-$ git clone https://github.com/4GeeksAcademy/react-hello.git
-$ cd react-hello
-```
+## 🏗️ How to run locally
 
-## Publish your website!
+If you want to run the project on your computer:
 
-This boilerplate is 100% compatible with the free [github pages](https://pages.github.com/) and [vercel](https://vercel.com/) hosting.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/PatriciaAlEs/PracticaReactPatriciaAlEs.git
+Navigate into the project folder
 
-It takes just 2 minutes to deploy, [click here to start the process](https://4geeks.com/docs/start/deploy-to-render-com).
+bash
+cd PracticaReactPatriciaAlEs
+Install dependencies
 
-## Other features
+bash
+npm install
+Run the development server
 
-- Automatic Code Formatting: Use of [Prettier](https://prettier.io/) for automatic code indentation and formatting.
-- Error reporting: Use of [eslint](https://eslint.org/) for better error reporting.
-
-### Contributors
-
-This template was built as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
-
-You can find other templates and resources like this at the [school github page](https://github.com/4geeksacademy/).
+bash
+npm run dev
